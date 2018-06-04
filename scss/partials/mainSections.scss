@@ -1,0 +1,60 @@
+.main_container {
+  margin: 5vh auto;
+  max-width: 1500px;
+  max-height: 1500px;
+  width: 100vw;
+  height: 100vw;
+
+  background-color: antiquewhite;
+  border: 1px solid black;
+  position: relative;
+
+  section {
+    display: block;
+    position: absolute;
+    width:50%;
+    height: 50%;
+    border: 1px solid green;
+    transition: all 0.5s;
+    &:hover{
+      width:90%;
+      height: 90%;
+      z-index: 999;
+    }
+   }
+
+
+  .section1{
+    left: 0;
+    top: 0;
+    background-color: cornflowerblue;
+    z-index: 1;
+
+  }
+  .section2{
+    right: 0;
+    top: 0;
+    background-color: aqua;
+    z-index: 2;
+
+  }
+  .section3{
+    left: 0;
+    bottom:0;
+    background-color: #bada55;
+    z-index: 3;
+  }
+  .section4{
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: 4;
+  }
+
+}
+
+
+
+
+
+

@@ -1,57 +1,180 @@
-.main_container {
-  margin: 5vh auto;
+.main_container{
   max-width: 1500px;
   max-height: 1500px;
-  width: 100vw;
-  height: 100vw;
-
-  background-color: antiquewhite;
   border: 1px solid black;
   position: relative;
 
-  section {
-    display: block;
+  section{
     position: absolute;
-    width:50%;
+    display: block;
+    width: 50%;
     height: 50%;
-    border: 1px solid green;
-    transition: all 0.5s;
-    &:hover{
-      width:90%;
-      height: 90%;
-      z-index: 999;
+    border: 1px solid white;
+  }
+    .section1{
+      left: 0;
+      top: 0;
+      background-color: cornflowerblue;
+      z-index: 1;
+
     }
-   }
+    .section2{
+      right: 0;
+      top: 0;
+      background-color: aqua;
+      z-index: 2;
 
+    }
+    .section3{
+      left: 0;
+      bottom:0;
+      background-color: #bada55;
+      z-index: 3;
+    }
+    .section4{
+      right: 0;
+      bottom: 0;
+      background-color: red;
+      z-index: 4;
+    }
 
-  .section1{
-    left: 0;
-    top: 0;
-    background-color: cornflowerblue;
-    z-index: 1;
+}
 
-  }
-  .section2{
-    right: 0;
-    top: 0;
-    background-color: aqua;
-    z-index: 2;
-
-  }
-  .section3{
-    left: 0;
-    bottom:0;
-    background-color: #bada55;
-    z-index: 3;
-  }
-  .section4{
-    right: 0;
-    bottom: 0;
-    background-color: red;
-    z-index: 4;
+@media all AND (orientation: landscape) AND (min-height: 800px) {
+  .main_container {
+    width: 100vh;
+    height: 100vh;
+    margin: auto;
   }
 
 }
+@media all AND (orientation: landscape) AND (max-height: 800px) {
+  .main_container {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    min-height: 400px;
+    section{
+      width: 25%;
+      height: 100%;
+    }
+    .section1{
+      left: 0;
+      top: 0;
+    }
+    .section2{
+      left: 25%;
+      top: 0;
+    }
+    .section3{
+      left: 50%;
+      top:0;
+    }
+    .section4{
+      left: 75%;
+      top: 0;
+    }
+  }
+
+}
+
+
+
+@media all AND (orientation: portrait) AND (min-width: 800px){
+  .main_container {
+    width: 100vw;
+    height: 100vw;
+    margin: auto;
+  }
+}
+@media all AND (orientation: portrait) AND (max-width: 800px){
+  .main_container {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    min-width: 400px;
+    section{
+      width: 100%;
+      height: 25%;
+    }
+    .section1{
+      left: 0;
+      top: 0;
+    }
+    .section2{
+      left: 0%;
+      top: 25%;
+    }
+    .section3{
+      left: 0;
+      top:50%;
+    }
+    .section4{
+      left: 0%;
+      top: 75%;
+    }
+  }
+}
+
+
+
+
+
+
+//.main_container {
+//  margin: 5vh auto;
+//  max-width: 1500px;
+//  max-height: 1500px;
+//  width: 100vw;
+//  height: 100vw;
+//
+//  background-color: antiquewhite;
+//  border: 1px solid black;
+//  position: relative;
+//
+//  section {
+//    display: block;
+//    position: absolute;
+//    width:50%;
+//    height: 50%;
+//    border: 1px solid green;
+//    transition: all 0.5s;
+//    &:hover{
+//      width:90%;
+//      height: 90%;
+//      z-index: 999;
+//    }
+//   }
+//
+//
+//  .section1{
+//    left: 0;
+//    top: 0;
+//    background-color: cornflowerblue;
+//    z-index: 1;
+//
+//  }
+//  .section2{
+//    right: 0;
+//    top: 0;
+//    background-color: aqua;
+//    z-index: 2;
+//
+//  }
+//  .section3{
+//    left: 0;
+//    bottom:0;
+//    background-color: #bada55;
+//    z-index: 3;
+//  }
+//  .section4{
+//    right: 0;
+//    bottom: 0;
+//    background-color: red;
+//    z-index: 4;
+//  }
+//
+//}
 
 
 

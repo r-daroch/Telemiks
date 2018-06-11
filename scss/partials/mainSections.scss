@@ -1,3 +1,13 @@
+@mixin onClick_standard(){
+  width: 95%;
+  height: 95%;
+  z-index: 999;
+}
+@mixin onClick_boxShadow($hOffset,$vOffset){
+  box-shadow: $hOffset $vOffset
+}
+
+
 .main_container{
   max-width: 1500px;
   max-height: 1500px;
@@ -10,20 +20,22 @@
     width: 50%;
     height: 50%;
     border: 1px solid white;
+    transition: all 0.5s;
+    &:hover{
+      @include onClick_standard();
+    }
   }
     .section1{
       left: 0;
       top: 0;
       background-color: cornflowerblue;
       z-index: 1;
-
     }
     .section2{
       right: 0;
       top: 0;
       background-color: aqua;
       z-index: 2;
-
     }
     .section3{
       left: 0;
@@ -37,8 +49,19 @@
       background-color: red;
       z-index: 4;
     }
+      //.section1_onClick{
+      //
+      //}
+      //.section2_onClick{
+      //
+      //}
+      //.section3_onClick{
+      //
+      //}
+      //.section4_onClick {
+      //}
 
-}
+  }
 
 @media all AND (orientation: landscape) AND (min-height: 800px) {
   .main_container {
@@ -61,18 +84,37 @@
     .section1{
       left: 0;
       top: 0;
+      &:hover{
+        width: 100%;
+        height: 90%;
+      }
     }
     .section2{
       left: 25%;
       top: 0;
+      &:hover{
+        left:0;
+        width: 100%;
+        height: 90%;
+      }
     }
     .section3{
       left: 50%;
       top:0;
+      &:hover{
+        left: 0;
+        width: 100%;
+        height: 90%;
+      }
     }
     .section4{
       left: 75%;
       top: 0;
+      &:hover{
+        left: 0;
+        width: 100%;
+        height: 90%;
+      }
     }
   }
 
@@ -100,18 +142,37 @@
     .section1{
       left: 0;
       top: 0;
+      &:hover{
+        width: 90%;
+        height: 100%;
+      }
     }
     .section2{
-      left: 0%;
+      left: 0;
       top: 25%;
+      &:hover{
+        top: 0;
+        width: 90%;
+        height: 100%;
+      }
     }
     .section3{
       left: 0;
       top:50%;
+      &:hover{
+        top: 0;
+        width: 90%;
+        height: 100%;
+      }
     }
     .section4{
-      left: 0%;
+      left: 0;
       top: 75%;
+      &:hover{
+        top: 0;
+        width: 90%;
+        height: 100%;
+      }
     }
   }
 }

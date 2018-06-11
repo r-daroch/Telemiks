@@ -1,5 +1,10 @@
 
 document.addEventListener("DOMContentLoaded",function (event) {
-    const sectionsArr = document.querySelectorAll(".main_container section");
+    let sectionsArr = document.querySelectorAll(".main_container section");
     console.log(sectionsArr);
+    sectionsArr=[...sectionsArr];
+    console.log(sectionsArr);
+    sectionsArr.forEach(oneSection=>{
+
+    })
 });
